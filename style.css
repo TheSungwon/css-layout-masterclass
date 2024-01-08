@@ -1,18 +1,24 @@
 .father {
   display: flex;
-  /* justify-content: space-between; */
+  height: 100vh;
+  justify-content: space-around;
   gap: 10px;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
 }
 
 .box {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   background-color: tomato;
   border-radius: 25px;
   border: 1px solid black;
   color: white;
   font-size: 36px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* flexbox - 
@@ -25,10 +31,36 @@ display:flex -> flex container로 바꿔줌
 gap -> 기본적으로 flex container가 간격을 주도록 함
 자식 요소 간 간격
 
-flex-direction: row; 기본 값은 row 
+flex-direction: row; 기본 값은 row  -> 기본 설정이므로 적어주지 않아도 됨
 -> flexbox에게 요소들이 어떤 방향으로 갈지 지시하는 역할 (row & column) or row&column + reverse
 
 
 
+flex axis (축)
+-> flex 레이아웃 시스템에는 두 개의 축이 있음.
+ - main axis (주축)
+ - corss axis (교차축)
 
+ flex container의 direction에 따라 달라짐.
+ direction이 row 일 경우
+  main axis는 왼쪽에서 오른쪽으로 가는 가로선
+  cross axis는 row일 경우 위에서 아래로 가는 세로선
+   
+-> 아이템을 주축에서 옮기거나, 교차축에서 옮기는 경우가 있음
+주축과 교차축을 옮기는 property는 서로 다름
+
+-> 주축을 이동시키는 property는 justify-content
+
+-> 교차축을 이동시키는 property는 align-items
+
+flex container의 높이가 100px이어서 align-items가 변형되는 걸 볼 수 없어서 height:100vh 적용
+
+
+-> .box도 flex container로 변경가능
+  따라서 숫자도 가운데로 이동가능
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
 */
