@@ -1,10 +1,12 @@
 .father {
   display: flex;
   height: 100vh;
-  justify-content: space-around;
   gap: 10px;
   flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
+  /* flex-row: row wrap; */
 }
 
 .box {
@@ -63,4 +65,20 @@ flex container의 높이가 100px이어서 align-items가 변형되는 걸 볼 �
   align-items: center;
 
   
+
+  --
+
+  flex-direction:row
+  -> 주축은 수평, 교차축은 수직
+  flex-direction:column
+  -> 주축은 수직, 교차축은 수평
+  
+
+  --
+
+  flex-wrap:nowrap; 이 기본값 (줄바꿈없음, 한 줄)
+  flex-wrap:wrap; -> 자식요소 넓이만큼 (다중라인)
+  
+  --
+  flex-row: row wrap; -> flex-direction & flex-wrap 설정
 */
