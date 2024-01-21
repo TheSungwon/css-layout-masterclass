@@ -1,12 +1,15 @@
 .father {
   display: flex;
   height: 100vh;
-  gap: 10px;
+  /* gap: 10px; */
+  row-gap: 5px;
+  column-gap: 30px;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   /* flex-row: row wrap; */
+  align-content: center;
 }
 
 .box {
@@ -81,4 +84,13 @@ flex container의 높이가 100px이어서 align-items가 변형되는 걸 볼 �
   
   --
   flex-row: row wrap; -> flex-direction & flex-wrap 설정
+
+  --
+  align-content:center; 
+  align-content는 다중라인 컨테이너를 다룰 때만 사용하는 속성
+
+  --
+  gap대신 행 과 열 간격을 따로 주고 싶다면
+  row-gap: 5px;
+  column-gap: 30px;
 */
