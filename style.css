@@ -5,16 +5,16 @@
   row-gap: 5px;
   column-gap: 30px;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   /* flex-row: row wrap; */
-  align-content: center;
+  /* align-content: center; */
 }
 
 .box {
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   background-color: tomato;
   border-radius: 25px;
   border: 1px solid black;
@@ -27,7 +27,7 @@
 }
 
 /* flexbox - 
-자식요소에게는 직접 명령하지 않음
+자식요소에게는 거의 명령하지 않음
 
 부모요소에 입력 하면 자식요소에게 적용 됨 + 자식 요소가 직속 부모 요소인지 체크
 display:flex -> flex container로 바꿔줌
@@ -93,4 +93,35 @@ flex container의 높이가 100px이어서 align-items가 변형되는 걸 볼 �
   gap대신 행 과 열 간격을 따로 주고 싶다면
   row-gap: 5px;
   column-gap: 30px;
+*/
+
+.box:nth-child(3) {
+  background-color: blueviolet;
+  order: 2;
+}
+
+.box:nth-child(6) {
+  background-color: aqua;
+  order: 1;
+}
+
+.box:first-child {
+  align-self: flex-start;
+}
+
+.box:last-child {
+  align-self: flex-end;
+}
+
+/* order를 포함해서 다른 속성들은 다른 자식들에게 상대적
+  따라서 order 2, 1 하면 요소는 맨 마지막으로 이동 후 6, 3 순으로 보여진다.
+  
+  다른 요소들은 기본적으로 order는 0
+
+
+  --
+  align-self -> 교차축에서 개별적으로 정렬할 수 있게 선택
+  align-self: flex-start;
+  align-self: flex-end;
+
 */
