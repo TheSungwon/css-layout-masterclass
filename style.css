@@ -6,7 +6,7 @@
   column-gap: 30px;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   flex-wrap: wrap;
   /* flex-row: row wrap; */
   /* align-content: center; */
@@ -14,7 +14,7 @@
 
 .box {
   height: 200px;
-  width: 200px;
+  /* width: 200px; */
   background-color: tomato;
   border-radius: 25px;
   border: 1px solid black;
@@ -95,7 +95,7 @@ flex container의 높이가 100px이어서 align-items가 변형되는 걸 볼 �
   column-gap: 30px;
 */
 
-.box:nth-child(3) {
+/* .box:nth-child(3) {
   background-color: blueviolet;
   order: 2;
 }
@@ -103,14 +103,16 @@ flex container의 높이가 100px이어서 align-items가 변형되는 걸 볼 �
 .box:nth-child(6) {
   background-color: aqua;
   order: 1;
-}
+} */
 
 .box:first-child {
-  align-self: flex-start;
+  background-color: tomato;
+  flex-grow: 1;
 }
 
 .box:last-child {
-  align-self: flex-end;
+  background-color: teal;
+  flex-grow: 5;
 }
 
 /* order를 포함해서 다른 속성들은 다른 자식들에게 상대적
@@ -124,4 +126,10 @@ flex container의 높이가 100px이어서 align-items가 변형되는 걸 볼 �
   align-self: flex-start;
   align-self: flex-end;
 
+*/
+
+/* flex-grow
+  컨테이너 자식들에게 얼마만큼의 공간을 차지할 수 있는지 알려줌
+  비율로 설정이 됨. 1 1 or 2 2 or 1 2
+  e.g. -> 내비게이션 바가 로고보다 5배 크게하고 싶다. 1 5
 */
