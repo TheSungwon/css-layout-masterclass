@@ -5,13 +5,14 @@
   flex-direction: row;
   justify-content: center;
   /* align-items: center; */
-  flex-wrap: nowwrap;
-  /* flex-row: row wrap; */
+  /* flex-wrap: nowwrap; */
   /* align-content: center; */
+
+  /* flex-row: row wrap; */
 }
 
 .box {
-  height: 200px;
+  height: 400px;
   /* width: 200px; */
   background-color: tomato;
   border-radius: 5px;
@@ -105,20 +106,14 @@ flex container의 높이가 100px이어서 align-items가 변형되는 걸 볼 �
 
 .box:first-child {
   background-color: tomato;
-  flex-grow: 1;
+  flex-basis: 500px;
+  flex-grow: 0;
   flex-shrink: 3;
-}
-
-.box:nth-child(2) {
-  background-color: orange;
-  flex-grow: 2;
-  flex-shrink: 0;
 }
 
 .box:last-child {
   background-color: teal;
   flex-grow: 1;
-  flex-shrink: 1;
 }
 
 /* order를 포함해서 다른 속성들은 다른 자식들에게 상대적
@@ -154,4 +149,27 @@ flex-shrink의 기본값은 1
 0은 축소 안 됨,
 1은 3보다 천천히 축소 됨 
 
+*/
+
+/* flex-basis
+flex항목의 이상적인 크기를 초기 설정
+
+  flex-basis: 500px;
+  flex-grow: 1;
+  이라면 초기설정인 500픽셀부터 flex-grow 적용 됨
+
+  다른 요소에도  flex-grow: 1;을 줘도 1:1이 아님
+
+  flex-grow:1; flex-shrink:0;을 설정하면
+  flex-basis는 min-width와 비슷한 속성이 됨.
+  즉, 500px에서 고정, 커지지만, 축소되지 않음.
+
+  flex-grow:0; flex-shrink:3; 이 되면 축소되지만 커지지는 않음.
+
+  flex만 적어서 설정할 수도 있음.
+  flex-grow, flex-shrink, flex-basis 순
+  flex: 1, 0, 500px;
+
+  flex-basis와 width의 차이점은 주축 기준으로 설정 됨.
+  e.g. row일때 너비, column일때 높이
 */
