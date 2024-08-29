@@ -1,0 +1,33 @@
+.father {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 100px 200px 100px;
+  grid-template-rows: 200px 100px;
+}
+
+.child {
+  border-radius: 25px;
+  background-color: tomato;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+
+  display: flex;
+  color: white;
+  font-size: 28px;
+  align-items: center;
+  justify-content: center;
+}
+
+.child:last-child {
+  background-color: turquoise;
+  /* grid-column-start: 2;
+  grid-column-end: -1; */
+  grid-column: 2/-1;
+}
+
+.child:first-child {
+  /* grid-row-start: 1;
+  grid-row-end: -1; */
+  grid-row: 1/-1;
+}
