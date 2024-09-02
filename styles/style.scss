@@ -1,25 +1,27 @@
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  padding: 20px 20px;
 }
 
-%alert {
+@mixin alert($bgColor, $borderColor) {
+  background-color: $bgColor;
+
   margin: 10px;
   padding: 10px 20px;
   border-radius: 10px;
-  border: 1px dashed black;
+  border: 3px dashed black;
+  border-color: $borderColor;
 }
 
 .success {
-  @extend %alert;
-  background-color: green;
+  @include alert(green, orange);
 }
 
 .warning {
-  @extend %alert;
-  background-color: orange;
+  @include alert(orange, red);
 }
 
 .error {
-  @extend %alert;
-  background-color: red;
+  @include alert(red, black);
 }
