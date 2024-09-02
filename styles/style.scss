@@ -1,26 +1,29 @@
-$bgColor: lightblue;
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 
-//CSS 변수 사용
-// :root{
-//   --bgColor:red;
-// }
-// background-color: var(--bgColor);
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    font-size: 50px;
 
-.father {
-  background-color: $bgColor;
-  display: grid;
-  gap: 10px;
-  height: 100vh;
+    li {
+      background-color: tomato;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 8px;
 
-  /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-}
+      a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
 
-.child {
-  background-color: teal;
-  color: white;
-  font-size: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+        &:hover {
+          opacity: 0.5;
+          color: gray;
+        }
+      }
+    }
+  }
 }
