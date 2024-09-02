@@ -6,3 +6,6 @@ cd css-layout-masterclass
 npm install
 code .
 npm run dev
+
+--
+npm add -D sass
