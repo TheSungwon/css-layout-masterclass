@@ -1,29 +1,25 @@
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 10px;
-    font-size: 50px;
+%alert {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px dashed black;
+}
 
-    li {
-      background-color: tomato;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 8px;
+.success {
+  @extend %alert;
+  background-color: green;
+}
 
-      a {
-        text-decoration: none;
-        color: white;
-        text-transform: uppercase;
+.warning {
+  @extend %alert;
+  background-color: orange;
+}
 
-        &:hover {
-          opacity: 0.5;
-          color: gray;
-        }
-      }
-    }
-  }
+.error {
+  @extend %alert;
+  background-color: red;
 }
