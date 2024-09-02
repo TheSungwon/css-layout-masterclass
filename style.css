@@ -2,19 +2,14 @@
   display: grid;
   gap: 10px;
   height: 100vh;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(2, 100px);
-  background-color: lightblue;
-
-  grid-auto-rows: 100px;
-
-  /* justify-content: center;
-  align-content: center; */
-  place-content: center;
+  /* grid-template-columns: 1fr max-content 1fr; */
+  /* grid-template-columns: 1fr min-content 1fr; */
+  /* grid-template-columns: 1fr minmax(250px, 1fr) 1fr; */
+  grid-template-columns: repeat(3, minmax(250px, 350px));
 }
 
 .child {
-  background-color: tomato;
+  background-color: teal;
   color: white;
   font-size: 28px;
   display: flex;
